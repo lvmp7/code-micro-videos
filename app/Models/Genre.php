@@ -6,13 +6,13 @@ use App\Models\Traits\Uuid;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Category extends Model
+class Genre extends Model
 {
     use SoftDeletes, Uuid;
 
-    protected $fillable = ["name", "description","is_active"];
+    protected $fillable = ["name"];
     protected $dates = ['deleted_at'];
     
     protected $keyTipe='string';
-    public $incrementing=false;  
+    public $incrementing=false;
 }

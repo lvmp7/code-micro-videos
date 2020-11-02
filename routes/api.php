@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\GenreController;
 use Illuminate\Http\Request;
 
 /*
@@ -19,5 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['namespace' => 'Api'], function () {
-    Route::resource('categories','CategoryController',['except' => ['create','edit']]);    
+    Route::resource('categories','CategoryController',['except' => ['create','edit']]);
+    Route::resource('genres','GenreController',['except' => ['create','edit']]);
 });
